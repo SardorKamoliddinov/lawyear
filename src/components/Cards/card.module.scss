@@ -1,0 +1,83 @@
+@import './../../variables.scss';
+
+.container{
+    padding: 50px 0;
+    max-width: 1440px;
+    margin: 0 auto;
+    .cards{
+        padding: 50px 0;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        justify-content: center;
+        align-items: center;
+        grid-gap: 30px;
+        .card{
+            padding: 60px 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px grey;
+            text-align: center;
+            flex-direction: column;
+            .icon{
+                font-size: 25px;
+                color: $mainColor;
+            }
+            h1{
+                font-size: 20px;
+                color: rgba(34, 34, 34, 1);
+                
+            }
+            p{
+                font-size: 14px;
+                color: rgba(34, 34, 34, 1);
+            }
+        }
+    }
+    .end{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        button{
+            padding: 10px 20px;
+            color: $secondColor;
+            font-weight: 900;
+            background-color: $mainColor;
+            border: 1px solid $mainColor;
+        }
+    }
+}
+@media(max-width: 768px){
+    .container{
+        .text{
+            p{
+                width: 80%;
+            }
+        }
+        .cards{
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+        }
+    }
+}
+@media(max-width: 500px){
+    .container{
+        .text{
+            p{
+                width: 100%;
+                padding: 10px;
+            }
+        }
+        .cards{
+            padding: 0 20px;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(6, 1fr );
+        }
+        .end{
+        padding-top: 20px;
+        }
+    }
+}

@@ -1,0 +1,147 @@
+@import './../../variables.scss';
+.footer{
+    max-width: 1600px;
+    margin: 0 auto;
+    background-color: $footerBack;
+    footer{
+        max-width: 1440px;
+        margin: 0 auto;
+        .text{
+            padding: 50px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            h1{
+                color: $mainColor;
+                font-size: 28px;
+                font-weight: 900;
+                h5{
+                    color: $secondColor;
+                    font-size: 20px;
+                }
+            }
+            p{
+                color: $secondColor;
+                width: 55%;
+                font-weight: 400;
+            }
+        }
+        .cards{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(1, 1fr);
+            gap: 20px;
+            padding: 50px 0;
+            .card1{
+                display: flex;
+                align-items: flex-start;
+                flex-direction: column;
+                .icon{
+                    padding: 20px 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 10px;
+                    color: $secondColor;
+                    p{
+                        color: grey;
+                        h3{
+                            color: $secondColor;
+                        }
+                    }
+                }
+            }
+            .card2{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                ul{
+                    li{ 
+                        padding: 10px 0;
+                        color: $secondColor;
+                        font-weight: 700;
+                        &:nth-child(3){
+                            color: $mainColor;
+                        }
+                    }
+                }
+            }
+            .card3{
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                .image{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 20px;
+                    h1{
+                        color: $secondColor;
+                        font-weight: 900;
+                        font-size: 20px;
+                        p{
+                            font-size: 14px;
+                            font-weight: 400;
+                        }
+                    }
+                }
+                p{
+                    color: $secondColor;
+                }
+                .btn{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    button{
+                        padding: 10px 30px;
+                        color: $secondColor;
+                        border: 1px solid $mainColor;
+                        background-color: $mainColor;
+                        font-weight: 900;
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-width: 768px){
+    .footer{
+        footer{
+            padding: 0 10px;
+            .cards{
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(2, 1fr);
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+}
+@media(max-width: 500px){
+    .footer{
+        footer{
+            .text{
+                padding: 10px;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                p{
+                    padding: 20px 0 30px;
+                    width: 100%;
+                }
+            }
+            .cards{
+                grid-template-columns: repeat(1, 1fr);
+                grid-template-rows: repeat(3, 1fr);
+                .card1{
+                    align-items: center;
+                }
+                .card3{
+                    p{
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}

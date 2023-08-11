@@ -1,23 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Routes } from "react-router-dom";
+import "./App.css";
+import Layout from "./components/Layout/layout";
+import Showcase from "./components/Showcase/showcase";
+import Card from "./components/Cards/card";
+import History from "./components/History/history";
+import Material from "./components/Material/material";
+import Home from "./Pages/Home/home";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route
+            path="*"
+            element={
+              <h1
+                style={{
+                  color: "white",
+                  backgroundColor: "black",
+                  fontSize: "45px",
+                }}
+              >
+                404 Not Found
+              </h1>
+            }
+          />
+          <Route path="showcase" element={<Showcase />} />
+          <Route path="card" element={<Card />} />
+          <Route path="history" element={<History />} />
+          <Route path="material" element={<Material />} />
+        </Route>
+      </Routes>
     </div>
   );
 }

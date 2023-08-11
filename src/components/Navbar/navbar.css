@@ -1,0 +1,81 @@
+@import './../../variables.scss';
+.navbar{
+    height: 80px;
+    padding: 30px 0 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+    .navbar .logo{
+        font-size: 28px;
+        font-weight: 600;
+    }
+    .navbar .logo h1{
+        color: #4F8FF0;
+        font-size: 28px;
+    }
+    .navbar .logo p{
+        color: #fff;
+        font-size: 20px;
+    }
+    .navbar .links{
+        color: #D9D2C3;
+        cursor: pointer;
+        display: flex;
+        gap: 30px;
+    }
+    .navbar .links li{
+                font-size: 18px;
+                font-weight: 600;
+            }
+    .navbar .toogle_icon{
+            display: none;   
+            color: #fff;
+    }
+
+
+@media(max-width: 768px){
+    .navbar{
+        position: relative;
+        transition: 0.5s height ease-in-out;
+    }
+    .navbar.expanded{
+        height: 100vh;
+    }
+    .navbar.expanded .links{
+        position: absolute;
+        top: 120px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        left: 0;
+        justify-content: center;
+        align-items: center;  
+        opacity: 1;
+    }
+    .navbar.expanded .links li{
+        margin: 15px 0;
+        font-size: 24px;
+    }
+        
+       .navbar .logo{
+            position: absolute;
+            top: 23px;
+            left: 20px;
+        }
+       .navbar .toogle_icon{
+            display: block;
+            position: absolute;
+            top: 28px;
+            right: 20px;
+            color: #D9D2C3;
+        }
+       .navbar .links{
+            display: none;
+
+        }
+    }
+    .navbar.expanded{
+        height: 100vh;
+    }
+

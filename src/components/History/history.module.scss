@@ -1,0 +1,87 @@
+@import './../../variables.scss';
+.container{
+    max-width: 1440px;
+    margin: 0 auto;
+    .cards{
+        padding: 50px 0;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        gap: 70px;
+        .card1{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            h1{
+                font-size: 28px;
+                font-weight: 900;
+                span{
+                    color: $mainColor;
+                }
+            }
+            .underScore{
+                padding: 1px;
+                width: 10%;
+                background-color: $mainColor;
+                border: 1px solid $mainColor;
+                color: $mainColor;
+            }
+            .btn{
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                text-align: center;
+                gap: 30px;
+                button{
+                    &:nth-child(1){
+                        padding: 10px 50px;
+                        font-weight: 900;
+                        background-color: $mainColor;
+                        color: $secondColor;
+                        border: 1px solid $mainColor;
+                    }
+                    &:nth-child(2){
+                        padding: 10px 40px;
+                        font-weight: 900;
+                        background-color: rgba(230, 230, 230, 1);
+                        border: 1px solid rgba(230, 230, 230, 1);
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-width: 900px){
+    .container{
+        .cards{
+            padding: 20px 0;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(2, 0.5fr);
+            .card1{
+                padding: 0 5px;
+                align-items: center;
+            }
+        }
+    }
+}
+@media(max-width: 530px){
+    .container{
+        .cards{
+            .card1{
+                h1{
+                    font-size: 20px;
+                }
+                .btn{
+                    button{
+                        &:nth-child(1){
+                            padding: 10px 30px;
+                        }
+                        &:nth-child(2){
+                            padding: 10px 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

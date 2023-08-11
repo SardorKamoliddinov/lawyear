@@ -1,0 +1,56 @@
+@import './../../variables.scss';
+.showcase{
+    max-width: 1600px;
+    margin: 0 auto;
+    .image{
+        max-width: 1440px;
+        margin: 0 auto;
+        height: 638px;
+        background: linear-gradient(rgba(34, 34, 34, 0.64), rgba(34, 34, 34, 0.64)), url('./back.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+        h2{
+            color: $secondColor;
+            font-size: 30px;
+        }
+        h1{
+            color: $mainColor;
+            font-size: 56px;
+            font-weight: 600;            
+        }
+        p{
+            font-weight: 400;
+            font-size: 20px;
+            color: $secondColor;
+            width: 70%;
+        }
+        button{
+            padding: 10px 15px;
+            color: $secondColor;
+            background-color: $mainColor;
+            border: 1px solid $mainColor;
+            font-weight: 900;
+        }
+    }
+}
+@media(max-width: 600px){
+    .showcase{
+        .image{
+            h2{
+                font-size: 24px;
+            }
+            h1{
+                font-size: 44px;
+            }
+            p{
+                font-size: 16px;
+            }
+        }
+    }
+}
